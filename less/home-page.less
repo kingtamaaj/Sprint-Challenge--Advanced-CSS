@@ -1,8 +1,29 @@
-// Home Content
+
+header {
+  display: flex;
+  /* width: 50%; */
+  align-items: center;
+  justify-content: center;
+  background: @wild-sand;
+}
+
+
 
 .home {
 
   .intro {
+
+    img {
+      border-radius: 4px;
+      height: 100%;
+
+      @media @phone {
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+      }
+
+  }
 
     h2 {
       padding: 15px;
@@ -10,8 +31,16 @@
 
     p {
       padding:0 15px;
+
+      @media @phone {
+        padding: 0px;
+      }
     }
   
+  }
+
+  .intro .text-container {
+    margin: 0 10px;
   }
 
   .space-images {
@@ -19,16 +48,55 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
     }
+    
+    @media @phone {
+      .blast {
+        width: 100%;
+      
+      }
+      .sky {
+        display: none;
+      }
+
+      .launch {
+       display: none;
+      }
+    }
+    
   }
 
+  .img-container {
+    margin-bottom: 30px;
+
+    @media @phone {
+     display: flex;
+     width: 100%;
+     margin-bottom: 30px;
+    }
+  }
   .visit-planets {
-    padding: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      width: 95%;
+
+      @media @phone {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 98%;
+    }
+      
 
     h3 {
       margin-top: 11px;
@@ -40,14 +108,28 @@
   }
 
   .walk {
-    margin-top: 60px;
+    margin-top: 10px 0;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
+    padding: 20px 0px;
     display: flex;
-    justify-content: center;
+    // flex-direction: column-reverse;
+    // justify-content: center;
+     
+      @media @phone {
+        padding: 5px 0px;
+      }
+
+    }
+    
+
 
     .walk-text {
       width: 50%;
+      
+      @media @phone {
+        display: flex;
+        flex-direction: column-reverse;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -56,20 +138,74 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
-      }
     }
 
+  
+
+
     .walk-img {
-      width: 46%;
+      width: 100%;
       margin-left: 4%;
-      
+       
+      // @media @phone {
+      //   width: 90%;
+      //   height: auto;
+      // }
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+      @media @phone {
+        width: 90%;
+        height: auto;
+      }
     }
+ 
+    .bottom-container  {
+      display: flex;
+      margin: 10px 50px;
+
+      @media @phone { 
+      flex-direction: column-reverse;
+      margin: 10px 0;
+      }
+    }
+      
+    .bottom-container .text-container {
+  
+        // margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @media @phone {
+          margin: 25px 0 0 23px;
+        }
+    
+      p { 
+       padding: 10px 0;
+      margin-bottom: 10px;
+        }
+
+        @media @phone {
+          width: 90%
+        }
+      }
+    
+ 
+  
+   .btn {
+    .custom-btn(100px, 30px, @btn-bg-color, white);
+    @media @phone {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 50px;
+      padding: 15px;
+
+    }
+
   }
-}// home
+}
+// home
